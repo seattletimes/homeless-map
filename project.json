@@ -1,0 +1,17 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "generous-parrot"
+    },
+    "live": {
+      "bucket": "",
+      "path": ""
+    }
+  },
+  "title": "PIT draft maps",
+  "description": "",
+  "url": "",
+  "slug": "",
+  "tags": []
+}
