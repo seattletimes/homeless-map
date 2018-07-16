@@ -27,6 +27,7 @@
     "mime": "^1.2.11",
     "shelljs": "^0.5.1",
     "through2": "^2.0.0",
+    "topojson-client": "^3.0.0",
     "typogr": "^0.6.4"
   },
   "browser": {
