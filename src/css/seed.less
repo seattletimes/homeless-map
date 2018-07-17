@@ -14,7 +14,6 @@ body {
   padding: 8px 0;
   margin: 20px auto;
   max-width: 960px;
-  padding-bottom: 0;
   clear: both;
 }
 .aspect-ratio-outer {
@@ -59,6 +58,33 @@ body {
     font-family: @df-serif;
   }
 }
+
+
+.story-list {
+  margin: 0;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.story {
+  .display-flex();
+  .justify-content(space-between);
+  .align-items(center);
+  
+  &:hover, &:focus {
+    cursor: pointer;
+    background-color: darken(@df-off-white, 5%);
+  }
+
+  div:first-child {
+    .flex(0 0 30%);
+  }
+  div:last-child {
+    .flex(0 0 60%);
+  }
+}
+
 @import "leaflet-tweaks";
 @import "legend";
 @import "popup";

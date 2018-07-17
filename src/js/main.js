@@ -17,18 +17,19 @@ var elem = document.querySelector("leaflet-map");
 var map = elem.map;
 var mainLayer = elem.lookup.mainlayer;
 
+var flyToLookup = {};
 mainLayer.eachLayer((tractLayer) => {
   var { pit_2018, pit_2017, pit_percent, total_pop, tract_num } = tractLayer.feature.properties;
   var storyDetail = "";
 
-
   if (window.stories[tract_num]) {
-    tractLayer.setStyle({ weight: 2, opacity: 1, color: "red" });
+    tractLayer.setStyle({ weight: 2, opacity: 1 });
     var story = window.stories[tract_num];
     storyDetail = `<div class="story=detail">
       <h2><a href="${story.url}">${story.headline}</a></h2>
       <img src="${story.image}" alt="${story.alt}">
     </div>`;
+    flyToLookup[tract_num] = tractLayer.getBounds().getCenter();
   }
 
   tractLayer.bindPopup(`<h1 class="bigheader">Census tract ${tract_num}</h1>
@@ -47,3 +48,13 @@ var topLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/
   opacity: 0.8,
   pane: "markerPane",
 }).addTo(map);
+
+
+document.querySelectorAll(".story").forEach((storyDiv) => {
+  var tractNum = storyDiv.getAttribute("data-tract");
+  var flyTo = () => {
+    map.flyTo(flyToLookup[tractNum], 12, { duration: 1 });
+  }
+  storyDiv.addEventListener("mouseover", flyTo);
+  storyDiv.addEventListener("focus", flyTo);
+});
