@@ -1,7 +1,20 @@
 .leaflet-popup-content {
   ul {
-    margin: 0;
+    margin: 5px 0;
     padding: 0;
     list-style: none;
+  }
+
+  li {
+    .display-flex();
+    .justify-content(space-between);
+
+    &.header {
+      font-weight: bold;
+    }
+  }
+
+  .right {
+    text-align: right;
   }
 }

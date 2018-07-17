@@ -12,7 +12,7 @@ require("component-responsive-frame");
 
 // helpers
 var commafy = function commafy(num) {
-  return num.toLocaleString("en-US");
+  return num.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
 };
 
 // dumb global
@@ -41,10 +41,23 @@ mainLayer.eachLayer((tractLayer) => {
 
   tractLayer.bindPopup(`<h1 class="bigheader">Census tract ${tract_num}</h1>
   <ul>
-    <li>Jan. 2018: ${pit_2018 === 25 ? '25 or fewer' : commafy(pit_2018)} people</li>
-    <li>Jan. 2017: ${pit_2017 === 25 ? '25 or fewer' : commafy(pit_2017)} people</li>
-    <li>Percent change: ${pit_percent > 0 ? '+' : ''}${(pit_percent * 100).toFixed(0)}%</li>
-    <li>Tract's total population: ${commafy(total_pop)}</li>
+    <li class="header">All Home's count of homeless people</li>
+    <li>
+      <span class="left">Jan. 2018: </span>
+      <span class="right">${pit_2018 === 25 ? '25 or fewer' : commafy(pit_2018)} people</span></li>
+    <li>
+      <span class="left">Jan. 2017: </span>
+      <span class="right">${pit_2017 === 25 ? '25 or fewer' : commafy(pit_2017)} people</span>
+    </li>
+    <li>
+      <span class="left">Change, 2017-2018: </span>
+      <span class="right">${pit_percent > 0 ? '+' : ''}${commafy(pit_percent * 100)}%</span>
+    </li>
+    <li>&nbsp;</li>
+    <li>
+      <span class="left">Tract's total population: </span>
+      <span class="right">${commafy(total_pop)}</span>
+    </li>
   </ul>
   ${storyDetail}
   `, { maxWidth: 200 });

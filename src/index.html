@@ -41,11 +41,11 @@
             </leaflet-map>
           </div>
           <aside class="legend">
-            <h1>Change in homeless population, 2017 to 2018</h1>
+            <h1>Change in homeless population, 2017 to 2018*</h1>
             <ul class="scale">
               <li><span class="block" style="background-color: #d8b365"></span> -11% or less</li>
               <li><span class="block" style="background-color: #f6e8c3"></span> -10% to -1%</li>
-              <li><span class="block" style="background-color: #ffffff"></span> No change</li>
+              <li><span class="block" style="background-color: #ffffff"></span> 0% or unknown*</li>
               <li><span class="block" style="background-color: #c7eae5"></span> +1% to +10%</li>
               <li><span class="block" style="background-color: #5ab4ac"></span> +11% to +100%</li>
               <li><span class="block" style="background-color: #01665e"></span> +101% or more</li>
@@ -64,6 +64,8 @@
           <% }) %>
           </ul>
       </section>
+      <p class="note">* All Home does not provide an exact number for census tracts where 25 or fewer homeless people were counted. To calculate the most conservative estimates of change, a count of 25 people was used for these tracts.</p>
+      <div class="source">Sources: All Home, Washington Office of Financial Management <span class="credit">Alec Glassford / The Seattle Times</span></div>
     </div>
   </responsive-child>
   <script>
