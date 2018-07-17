@@ -41,7 +41,7 @@ mainLayer.eachLayer((tractLayer) => {
 
   tractLayer.bindPopup(`<h1 class="bigheader">Census tract ${tract_num}</h1>
   <ul>
-    <li class="header">All Home's count of homeless people</li>
+    <li class="header block">All Home's count of homeless people</li>
     <li>
       <span class="left">Jan. 2018: </span>
       <span class="right">${pit_2018 === 25 ? '25 or fewer' : commafy(pit_2018)} people</span></li>
@@ -54,9 +54,9 @@ mainLayer.eachLayer((tractLayer) => {
       <span class="right">${pit_percent > 0 ? '+' : ''}${commafy(pit_percent * 100)}%</span>
     </li>
     <li>&nbsp;</li>
-    <li>
-      <span class="left">Tract's total population: </span>
-      <span class="right">${commafy(total_pop)}</span>
+    <li class="block">
+      Tract's total population (2017 estimate):<br>
+      ${commafy(total_pop)} people
     </li>
   </ul>
   ${storyDetail}
