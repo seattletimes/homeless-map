@@ -23,12 +23,12 @@
       <section class="map-and-stories">
         <div class="aspect-ratio-outer">
           <div class="aspect-ratio-inner">
-            <leaflet-map zoom=9.5 lat="47.51", lng="-122.2">
+            <leaflet-map zoom=10.5 lat="47.6", lng="-122.2">
               <map-options>{ "zoomSnap": 0.5 }</map-options>
               <tile-layer layer="cartoPositronBlank"></tile-layer>
               <geo-json id="mainlayer">
                 <geo-data></geo-data>
-                <geo-style>{ "weight": 1, "color": "#000", "opacity":0.2, "fillOpacity": 0.3 }</geo-style>
+                <geo-style>{ "weight": 1, "color": "#000", "opacity":0.1, "fillOpacity": 0.3 }</geo-style>
                 <geo-palette property="pit_percent">
                   <color-mapping min=-1 max=-0.11 color="#d8b365"></color-mapping>
                   <color-mapping min=-0.1 max=-0.01 color="#f6e8c3"></color-mapping>
@@ -41,7 +41,7 @@
             </leaflet-map>
           </div>
           <aside class="legend">
-            <h1>Increase in homeless population, 2017 to 2018</h1>
+            <h1>Change in homeless population, 2017 to 2018</h1>
             <ul class="scale">
               <li><span class="block" style="background-color: #d8b365"></span> -11% or less</li>
               <li><span class="block" style="background-color: #f6e8c3"></span> -10% to -1%</li>
@@ -52,11 +52,14 @@
             </ul>
           </aside>
         </div>
+        <p class="list-intro">Tap below to read related stories or see them on the map.</p>
         <ul class="story-list">
-          <% Object.entries(json.homelessMap_featured).forEach(([tract, story]) => { %>
+          <% Object.entries(json.homelessMap_featured)
+            .sort(([_, storyA], [__, storyB]) => storyA.sort - storyB.sort)
+            .forEach(([tract, story]) => { %>
             <div class="story" data-tract="<%= tract %>" tabindex="0">
-              <div><img src="<%= story.image %>" alt="<%= story.alt %>"></div>
-              <div><a href="<%= story.url %>"><%= story.headline %></a></div>
+              <div class="photo"><img src="<%= story.image %>" alt="<%= story.alt %>"></div>
+              <div class="hed"><a href="<%= story.url %>"><%= story.headline %></a></div>
             </div>
           <% }) %>
           </ul>

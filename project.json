@@ -2,7 +2,7 @@
   "s3": {
     "stage": {
       "bucket": "projects-staging.seattletimes.com",
-      "path": "generous-parrot"
+      "path": "apomicitic-remnant"
     },
     "live": {
       "bucket": "",
