@@ -17,15 +17,17 @@
   <responsive-child class="map-container">
     <div class="outmost">
       <section class="chatter">
-        <h1>Percent increase (PIT 2017 to 2018)</h1>
+        <h1>TK</h1>
+        <p>TK</p>
       </section>
       <div class="aspect-ratio-outer">
         <div class="aspect-ratio-inner">
-          <leaflet-map zoom=10>
+          <leaflet-map zoom=9.5 lat="47.51", lng="-122.2">
+            <map-options>{ "zoomSnap": 0.5 }</map-options>
             <tile-layer layer="cartoPositronBlank"></tile-layer>
             <geo-json id="mainlayer">
               <geo-data></geo-data>
-              <geo-style>{ "weight": 1, "color": "#000", "opacity":0.2, "fillOpacity": 0.5 }</geo-style>
+              <geo-style>{ "weight": 1, "color": "#000", "opacity":0.2, "fillOpacity": 0.3 }</geo-style>
               <geo-palette property="pit_percent">
                 <color-mapping min=-1 max=-0.11 color="#d8b365"></color-mapping>
                 <color-mapping min=-0.1 max=-0.01 color="#f6e8c3"></color-mapping>
@@ -38,14 +40,14 @@
           </leaflet-map>
         </div>
         <aside class="legend">
-          <h1>Map legend</h1>
+          <h1>Increase in homeless population, 2017 to 2018</h1>
           <ul class="scale">
             <li>
               <span class="block" style="background-color: #d8b365"></span> -11% or less</li>
             <li>
               <span class="block" style="background-color: #f6e8c3"></span> -10% to -1%</li>
             <li>
-              <span class="block" style="background-color: #f5f5f5"></span> No change</li>
+              <span class="block" style="background-color: #ffffff"></span> No change</li>
             <li>
               <span class="block" style="background-color: #c7eae5"></span> +1% to +10%</li>
             <li>
@@ -57,7 +59,10 @@
       </div>
     </div>
   </responsive-child>
-  <script>window.topoData = <%= t.include("pit_topo.json") %>;</script>
+  <script>
+    window.topoData = <%= t.include("pit_topo.json") %>;
+    window.stories = <%= JSON.stringify(json.homelessMap_featured) %>;
+  </script>
   <script src="app.js"></script>
   <% /*= t.include("partials/_foot.html"); */ %>
   <%= t.include("partials/_workHere.html") %>
