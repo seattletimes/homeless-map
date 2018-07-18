@@ -24,6 +24,9 @@ var elem = $.one("leaflet-map");
 var map = elem.map;
 var mainLayer = elem.lookup.mainlayer;
 
+// On mobile, zoom out one tick
+if (window.matchMedia("(max-width: 480px)").matches) map.zoomOut(1);
+
 // Add popup to each layer, + do more for tracts with stories
 var flyToLookup = {};
 mainLayer.eachLayer((tractLayer) => {
@@ -34,7 +37,7 @@ mainLayer.eachLayer((tractLayer) => {
   if (window.stories[tract_num]) {
     tractLayer.setStyle({ weight: 3, opacity: 1 });
     var story = window.stories[tract_num];
-    storyDetail = `<span class="header block">Related story</span>
+    storyDetail = `<span class="header block">Related story from ${story.org}</span>
       <a href="${story.url}" target="_blank">${story.headline}</a>
       <img src="${story.image}" alt="${story.alt}">`;
     flyToLookup[tract_num] = tractLayer.getBounds().getCenter();
@@ -57,7 +60,6 @@ mainLayer.eachLayer((tractLayer) => {
       <span class="right">${formatCount(pit_2017)}</span>
     </li>
     ${ pit_2018 === null ? '' : changeBlock}
-    <li>&nbsp;</li>
     <li class="block">
       Tract's total population (2017 estimate):<br>
       ${commafy(total_pop)} people

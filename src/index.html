@@ -18,12 +18,12 @@
     <div class="outmost">
       <section class="chatter">
         <h1>Where are people homeless in King County?</h1>
-        <p>TK</p>
+        <p>The 2018 Point in Time count of homelessness in King County found 12,112 people, a 4 percent increase from the year before. But the count found much larger increases in some areas. To find stories about how the homelessness crisis is seen in some neighborhoods, click on census tracts outlined in black. Neighborhoods with the least change are in white.</p>
       </section>
       <section class="map-and-stories">
         <div class="aspect-ratio-outer">
           <div class="aspect-ratio-inner">
-            <leaflet-map zoom=10.5 lat="47.6", lng="-122.2">
+            <leaflet-map zoom=9.5 lat="47.51", lng="-121.93">
               <map-options>{ "zoomSnap": 0.5 }</map-options>
               <tile-layer layer="cartoPositronBlank"></tile-layer>
               <geo-json id="mainlayer">
@@ -60,13 +60,16 @@
             .forEach(([tract, story]) => { %>
             <div class="story" data-tract="<%= tract %>" tabindex="0">
               <div class="photo"><img src="<%= story.image %>" alt="<%= story.alt %>"></div>
-              <div class="hed"><a href="<%= story.url %>" target="_blank"><%= story.headline %></a></div>
+              <div class="hed">
+                <span><%= story.org %></span>
+                <a href="<%= story.url %>" target="_blank"><%= story.headline %></a>
+              </div>
             </div>
           <% }) %>
           </ul>
       </section>
       <p class="note">* All Home does not provide an exact number for census tracts where 25 or fewer homeless people were counted. To calculate the most conservative estimates of change, a count of 25 people was used for these tracts. No data was available for the 2018 counts of census tracts 276 and 295.02.</p>
-      <div class="source">Sources: All Home, Washington Office of Financial Management <span class="credit">Alec Glassford / The Seattle Times</span></div>
+      <div class="source">Sources: All Home, King County, Washington Office of Financial Management <span class="credit">Alec Glassford / The Seattle Times</span></div>
     </div>
   </responsive-child>
   <script>

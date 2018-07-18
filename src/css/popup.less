@@ -17,10 +17,23 @@
   li {
     .display-flex();
     .justify-content(space-between);
+
+    &:last-child {
+      margin-top: 12px;
+    }
   }
 
   .right {
     text-align: right;
+  }
+
+  ul + .header {
+    padding-top: 5px;
+  }
+
+  a {
+    font-size: 14px;
+    line-height: 1;
   }
 
   img {

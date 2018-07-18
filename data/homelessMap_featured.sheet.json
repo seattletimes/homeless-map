@@ -2,64 +2,73 @@
   "47": {
     "sort": 2,
     "headline": "Ballard’s homelessness quadrupled last year, and anger is spilling over",
-    "url": "TK",
+    "url": "https://www.seattletimes.com/seattle-news/homeless/ballards-homelessness-quadrupled-last-year-and-anger-is-spilling-over/",
     "image": "assets/ballard.jpg",
-    "alt": "TK"
+    "alt": "TK",
+    "org": "The Seattle Times"
   },
   "85": {
     "sort": 8,
     "headline": "The bottleneck in Seattle’s homeless shelters that leaves thousands on the streets",
     "url": "https://www.seattletimes.com/seattle-news/homeless-in-seattle-as-wealth-in-king-county-has-boomed-so-has-the-population-on-the-streets/",
     "image": "https://static.seattletimes.com/wp-content/uploads/2017/10/ae78314c-b6bb-11e7-8b9c-3d3fd4be4930-780x548.jpg",
-    "alt": "TK"
+    "alt": "TK",
+    "org": "The Seattle Times"
   },
   "87": {
     "sort": 4,
     "headline": "The ultimate safety net",
     "url": "https://crosscut.com/2018/07/ultimate-safety-net",
     "image": "assets/crosscut3.jpg",
-    "alt": "Houdini, a dog owned by resident Sonny, plays with another resident, Ali, at Tent City 3 in Seattle's Central District during March 2018. (Gemina Garland-Lewis)"
+    "alt": "Houdini, a dog owned by resident Sonny, plays with another resident, Ali, at Tent City 3 in Seattle's Central District during March 2018. (Gemina Garland-Lewis)",
+    "org": "Crosscut"
   },
   "90": {
     "sort": 5,
     "headline": "On the streets for years: Chronic homelessness in Seattle, everywhere hard to escape",
     "url": "https://www.seattlepi.com/homeless_in_seattle/article/Chonic-homelessness-Seattle-hard-to-escape-13081998.php",
     "image": "assets/pi.jpg",
-    "alt": "TK"
+    "alt": "TK",
+    "org": "seattlepi.com"
   },
   "94": {
     "sort": 9,
     "headline": "Before homeless camps are cleared, a Seattle team coaxes people to shelter",
     "url": "https://www.seattletimes.com/seattle-news/homeless/before-the-tent-camps-are-cleared-this-seattle-team-coaxes-the-homeless-toward-shelter/",
     "image": "https://static.seattletimes.com/wp-content/uploads/2017/11/b5543df0-d3a6-11e7-bdab-c6aaa3af3406-780x515.jpg",
-    "alt": "TK"
+    "alt": "TK",
+    "org": "The Seattle Times"
   },
   "109": {
     "sort": 10,
     "headline": "Seattle still doesn’t know what to do with thousands of people living in vehicles",
     "url": "https://www.seattletimes.com/seattle-news/homeless/seattle-still-has-no-strategy-for-thousands-of-people-living-in-vehicles/",
     "image": "https://static.seattletimes.com/wp-content/uploads/2018/04/99274810-3c20-11e8-bfdc-24dda820d7a2-780x525.jpg",
-    "alt": "TK"
+    "alt": "TK",
+    "org": "The Seattle Times"
   },
   "307": {
     "sort": 7,
     "headline": "A day in the life of a homeless father of four",
     "url": "https://crosscut.com/2018/07/day-life-homeless-father-four",
     "image": "assets/crosscut1.jpg",
-    "alt": "When Anthony Battiste and his wife separated, he become the sole caregiver for his four young sons. Unable to pay the mounting bills on his income as a roofer while tending to his sons full-time, Battiste and his boys became homeless. Spend a day in their life as they regain stability through help from Mary's Place, a Seattle-based social service organization."
+    "alt": "When Anthony Battiste and his wife separated, he become the sole caregiver for his four young sons. Unable to pay the mounting bills on his income as a roofer while tending to his sons full-time, Battiste and his boys became homeless. Spend a day in their life as they regain stability through help from Mary's Place, a Seattle-based social service organization.",
+    "org": "KCTS"
   },
   "53.01": {
     "sort": 3,
     "headline": "Your queen’s here, honey: Seattle street youth on the Ave",
     "url": "http://kuow.org/post/young-and-homeless-seattles-u-district",
     "image": "assets/kuow.jpg",
-    "alt": "Milee Ballweg, 20, sits on the steps of a church in the University District where she sleeps just after 5:00 a.m. on Wednesday, July 11, 2018, in Seattle. Minutes before, a friend who lives in a nearby building yelled loudly to wake her up and alert her that a man was standing over her as she slept. KUOW Photo/Megan Farmer"
+    "alt": "Milee Ballweg, 20, sits on the steps of a church in the University District where she sleeps just after 5:00 a.m. on Wednesday, July 11, 2018, in Seattle. Minutes before, a friend who lives in a nearby building yelled loudly to wake her up and alert her that a man was standing over her as she slept. KUOW Photo/Megan Farmer",
+    "org": "KUOW"
   },
   "100.01": {
     "sort": 6,
     "headline": "Number of homeless veterans is down. What’s working?",
     "url": "https://crosscut.com/2018/07/number-homeless-veterans-down-whats-working",
     "image": "assets/crosscut2.jpg",
-    "alt": "Benjamin Bourg photographed at Compass Housing apartments in Renton, July 11, 2018. (Matt M. McKnight/Crosscut)"
+    "alt": "Benjamin Bourg photographed at Compass Housing apartments in Renton, July 11, 2018. (Matt M. McKnight/Crosscut)",
+    "org": "Crosscut"
   }
 }
