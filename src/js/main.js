@@ -14,21 +14,23 @@ require("component-responsive-frame");
 var commafy = function commafy(num) {
   return num.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
 };
-
-// dumb global
-var focusedFromPopup = false;
+var formatCount = function formatCount(num) {
+  return (num === null) ? ("no data") :
+    (`${num === 25 ? '25 or fewer' : commafy(num)} people`);
+};
 
 //get access to Leaflet and the map
 var elem = $.one("leaflet-map");
 var map = elem.map;
 var mainLayer = elem.lookup.mainlayer;
 
+// Add popup to each layer, + do more for tracts with stories
 var flyToLookup = {};
 mainLayer.eachLayer((tractLayer) => {
   var { pit_2018, pit_2017, pit_percent, total_pop, tract_num } = tractLayer.feature.properties;
   var storyDetail = "";
-  if (tract_num === '276') console.log(tractLayer.feature.properties);
 
+  // Only for tracts with stories
   if (window.stories[tract_num]) {
     tractLayer.setStyle({ weight: 3, opacity: 1 });
     var story = window.stories[tract_num];
@@ -36,17 +38,9 @@ mainLayer.eachLayer((tractLayer) => {
       <a href="${story.url}" target="_blank">${story.headline}</a>
       <img src="${story.image}" alt="${story.alt}">`;
     flyToLookup[tract_num] = tractLayer.getBounds().getCenter();
-    tractLayer.on("click", () => {
-      focusedFromPopup = true;
-      $.one(`[data-tract="${tract_num}"]`).focus();
-    });
   }
 
-  var formatCount = function formatCount(num) {
-    return (num === null) ? ("no data") :
-    (`${num === 25 ? '25 or fewer' : commafy(num)} people`);
-  };
-
+  // Build this markup separately, because we will leave it out if pit_2018 is null (no data)
   var changeBlock = `<li>
     <span class="left">Change, 2017-2018: </span>
     <span class="right">${pit_percent > 0 ? '+' : ''}${commafy(pit_percent * 100)}%${pit_2018 === 25 || pit_2017 === 25 ? '*' : ''}</span>
@@ -73,7 +67,9 @@ mainLayer.eachLayer((tractLayer) => {
   `, { maxWidth: 200 });
 });
 
+// Disable scroll wheel zoom
 map.scrollWheelZoom.disable();
+
 // Add city/neighborhood labels above tracts
 var topLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
   opacity: 0.6,
@@ -81,11 +77,8 @@ var topLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/
 }).addTo(map);
 
 
+// Event listener - a single function, not one per tract, so we can debounce among all - for clicking on story in story list
 var flyTo = debounce((ev) => {
-  if (focusedFromPopup) {
-    focusedFromPopup = false;
-    return;
-  }
   var tractNum = ev.target.getAttribute("data-tract");
   if (map.getCenter() === flyToLookup[tractNum]) return;
   map.closePopup();

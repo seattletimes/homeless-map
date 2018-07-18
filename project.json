@@ -5,13 +5,13 @@
       "path": "apomicitic-remnant"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2018/homeless/point-in-time-count-map"
     }
   },
   "title": "Where are people homeless in King County?",
   "description": "",
-  "url": "",
+  "url": "https://projects.seattletimes.com/2018/homeless/point-in-time-count-map",
   "slug": "",
   "tags": [],
   "sheets": ["1iF891-s6UrZCj16yWZm5BCgg0KqwLMEl-DIV_haGpZU"]
