@@ -1,18 +1,26 @@
 {
+  "18": {
+    "sort": 8,
+    "headline": "This tiny house village allows drugs. Should it have been put in a high drug-traffic area?",
+    "url": "https://www.seattletimes.com/seattle-news/homeless/seattle-neighborhood-is-split-is-licton-springs-tent-city-helping-or-hurting-drug-users/",
+    "image": "https://static.seattletimes.com/wp-content/uploads/2018/04/8b447912-4372-11e8-8eed-9fc702f28309-780x520.jpg",
+    "alt": "Darryl Taylor, 55, lives at Licton Springs Village, a tent and tiny-house encampment where residents can use drugs and alcohol. &ldquo;It helped me turn my life around,&rdquo; said Taylor, who lost two toes and part of his finger to frostbite while living on the streets of Seattle. &ldquo;It kind of saved me.&rdquo; (Bettina Hansen/The Seattle Times)",
+    "org": "The Seattle Times"
+  },
   "47": {
     "sort": 2,
     "headline": "Ballard’s homelessness quadrupled last year, and anger is spilling over",
     "url": "https://www.seattletimes.com/seattle-news/homeless/ballards-homelessness-quadrupled-last-year-and-anger-is-spilling-over/",
     "image": "assets/ballard.jpg",
-    "alt": "TK",
+    "alt": "A man pushes a cart with a number of items down a sidewalk.",
     "org": "The Seattle Times"
   },
   "85": {
-    "sort": 8,
+    "sort": 9,
     "headline": "The bottleneck in Seattle’s homeless shelters that leaves thousands on the streets",
     "url": "https://www.seattletimes.com/seattle-news/homeless-in-seattle-as-wealth-in-king-county-has-boomed-so-has-the-population-on-the-streets/",
     "image": "https://static.seattletimes.com/wp-content/uploads/2017/10/ae78314c-b6bb-11e7-8b9c-3d3fd4be4930-780x548.jpg",
-    "alt": "TK",
+    "alt": "People lie on bedding on a sidwalk.",
     "org": "The Seattle Times"
   },
   "87": {
@@ -28,23 +36,23 @@
     "headline": "On the streets for years: Chronic homelessness in Seattle, everywhere hard to escape",
     "url": "https://www.seattlepi.com/homeless_in_seattle/article/Chonic-homelessness-Seattle-hard-to-escape-13081998.php",
     "image": "assets/pi.jpg",
-    "alt": "TK",
+    "alt": "A man standing next to a tarp holds a plate with a sandwich.",
     "org": "seattlepi.com"
   },
   "94": {
-    "sort": 9,
+    "sort": 10,
     "headline": "Before homeless camps are cleared, a Seattle team coaxes people to shelter",
     "url": "https://www.seattletimes.com/seattle-news/homeless/before-the-tent-camps-are-cleared-this-seattle-team-coaxes-the-homeless-toward-shelter/",
     "image": "https://static.seattletimes.com/wp-content/uploads/2017/11/b5543df0-d3a6-11e7-bdab-c6aaa3af3406-780x515.jpg",
-    "alt": "TK",
+    "alt": "Seattle police Sgt. Eric Zerr, right, who leads officers on Seattle’s Navigation Team, helps a resident of a homeless camp near the Interstate 90 Mount Baker Tunnel move his belongings Nov. 15. The team had worked with the residents for several days to help them find services and shelter. (Mike Siegel/The Seattle Times)",
     "org": "The Seattle Times"
   },
   "109": {
-    "sort": 10,
+    "sort": 11,
     "headline": "Seattle still doesn’t know what to do with thousands of people living in vehicles",
     "url": "https://www.seattletimes.com/seattle-news/homeless/seattle-still-has-no-strategy-for-thousands-of-people-living-in-vehicles/",
     "image": "https://static.seattletimes.com/wp-content/uploads/2018/04/99274810-3c20-11e8-bfdc-24dda820d7a2-780x525.jpg",
-    "alt": "TK",
+    "alt": "John Higuitas speaks with another camper in the city of Seattle’s last safe parking zone for people living in their vehicles. Permitted residents can park at the Sodo site without fear of being ticketed or towed. It’s a noisy place: One side of the parking lot is next to busy railroad tracks, another side is next to the Spokane Street viaduct, and it’s under the flight path. (Lauren Frohne/The Seattle Times)",
     "org": "The Seattle Times"
   },
   "307": {
@@ -53,7 +61,7 @@
     "url": "https://crosscut.com/2018/07/day-life-homeless-father-four",
     "image": "assets/crosscut1.jpg",
     "alt": "When Anthony Battiste and his wife separated, he become the sole caregiver for his four young sons. Unable to pay the mounting bills on his income as a roofer while tending to his sons full-time, Battiste and his boys became homeless. Spend a day in their life as they regain stability through help from Mary's Place, a Seattle-based social service organization.",
-    "org": "KCTS"
+    "org": "KCTS 9"
   },
   "53.01": {
     "sort": 3,
