@@ -28,8 +28,9 @@
               <tile-layer layer="cartoPositronBlank"></tile-layer>
               <geo-json id="mainlayer">
                 <geo-data></geo-data>
-                <geo-style>{ "weight": 1, "color": "#000", "opacity":0.1, "fillOpacity": 0.3 }</geo-style>
+                <geo-style>{ "weight": 1, "color": "#000", "opacity":0.1, "fillOpacity": 0.4 }</geo-style>
                 <geo-palette property="pit_percent">
+                  <color-mapping max=-2 color="transparent"></color-mapping>
                   <color-mapping min=-1 max=-0.11 color="#d8b365"></color-mapping>
                   <color-mapping min=-0.1 max=-0.01 color="#f6e8c3"></color-mapping>
                   <color-mapping min=-0 max=0 color="#ffffff"></color-mapping>
@@ -45,7 +46,7 @@
             <ul class="scale">
               <li><span class="block" style="background-color: #d8b365"></span> -11% or less</li>
               <li><span class="block" style="background-color: #f6e8c3"></span> -10% to -1%</li>
-              <li><span class="block" style="background-color: #ffffff"></span> 0% or unknown*</li>
+              <li><span class="block" style="background-color: #ffffff"></span> 0%*</li>
               <li><span class="block" style="background-color: #c7eae5"></span> +1% to +10%</li>
               <li><span class="block" style="background-color: #5ab4ac"></span> +11% to +100%</li>
               <li><span class="block" style="background-color: #01665e"></span> +101% or more</li>
@@ -59,12 +60,12 @@
             .forEach(([tract, story]) => { %>
             <div class="story" data-tract="<%= tract %>" tabindex="0">
               <div class="photo"><img src="<%= story.image %>" alt="<%= story.alt %>"></div>
-              <div class="hed"><a href="<%= story.url %>"><%= story.headline %></a></div>
+              <div class="hed"><a href="<%= story.url %>" target="_blank"><%= story.headline %></a></div>
             </div>
           <% }) %>
           </ul>
       </section>
-      <p class="note">* All Home does not provide an exact number for census tracts where 25 or fewer homeless people were counted. To calculate the most conservative estimates of change, a count of 25 people was used for these tracts.</p>
+      <p class="note">* All Home does not provide an exact number for census tracts where 25 or fewer homeless people were counted. To calculate the most conservative estimates of change, a count of 25 people was used for these tracts. No data was available for the 2018 counts of census tracts 276 and 295.02.</p>
       <div class="source">Sources: All Home, Washington Office of Financial Management <span class="credit">Alec Glassford / The Seattle Times</span></div>
     </div>
   </responsive-child>

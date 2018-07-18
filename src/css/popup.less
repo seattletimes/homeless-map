@@ -1,4 +1,13 @@
 .leaflet-popup-content {
+  .header {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .block {
+    display: block;
+  }
+
   ul {
     margin: 5px 0;
     padding: 0;
@@ -8,17 +17,14 @@
   li {
     .display-flex();
     .justify-content(space-between);
-
-    &.header {
-      font-weight: bold;
-    }
-
-    &.block {
-      display: block;
-    }
   }
 
   .right {
     text-align: right;
+  }
+
+  img {
+    display: block;
+    width: 200px;
   }
 }
