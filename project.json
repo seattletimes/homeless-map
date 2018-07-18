@@ -11,8 +11,9 @@
   },
   "title": "Where are people homeless in King County?",
   "description": "",
-  "url": "https://projects.seattletimes.com/2018/homeless/point-in-time-count-map",
+  "url": "https://projects.seattletimes.com/2018/homeless/point-in-time-count-map/",
   "slug": "",
   "tags": [],
-  "sheets": ["1iF891-s6UrZCj16yWZm5BCgg0KqwLMEl-DIV_haGpZU"]
+  "sheets": ["1iF891-s6UrZCj16yWZm5BCgg0KqwLMEl-DIV_haGpZU"],
+  "production": true
 }

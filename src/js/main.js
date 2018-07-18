@@ -66,7 +66,7 @@ mainLayer.eachLayer((tractLayer) => {
     </li>
   </ul>
   ${storyDetail}
-  `, { maxWidth: 200 });
+  `, { minWidth: 200, maxWidth: 200 });
 });
 
 // Disable scroll wheel zoom
@@ -78,16 +78,16 @@ var topLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/
   pane: "markerPane",
 }).addTo(map);
 
-
-// Event listener - a single function, not one per tract, so we can debounce among all - for clicking on story in story list
-var flyTo = debounce((ev) => {
-  var tractNum = ev.target.getAttribute("data-tract");
-  if (map.getCenter() === flyToLookup[tractNum]) return;
-  map.closePopup();
-  map.flyTo(flyToLookup[tractNum], 12.5, { duration: 1 });
-});
-
+var mapIsFlying = false;
 $(".story").forEach((storyDiv) => {
+  var tractNum = storyDiv.getAttribute("data-tract");
+  var flyTo = debounce((ev) => {
+    if (mapIsFlying || map.getCenter() === flyToLookup[tractNum]) return;
+    map.closePopup();
+    map.flyTo(flyToLookup[tractNum], 12.5, { duration: 1 });
+    mapIsFlying = true;
+    setTimeout(() => { mapIsFlying = false; }, 1000);
+  });
   storyDiv.addEventListener("click", flyTo);
   storyDiv.addEventListener("focus", flyTo);
 });
