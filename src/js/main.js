@@ -38,8 +38,8 @@ mainLayer.eachLayer((tractLayer) => {
     tractLayer.setStyle({ weight: 3, opacity: 1 });
     var story = window.stories[tract_num];
     storyDetail = `<span class="header block">Related story from ${story.org}</span>
-      <a href="${story.url}" target="_blank">${story.headline}</a>
-      <img src="${story.image}" alt="${story.alt}">`;
+      <a href="${story.url}" target="_blank" rel="noopener noreferrer">${story.headline}</a>
+      <a href="${story.url}" target="_blank" rel="noopener noreferrer"><img src="${story.image}" alt="${story.alt}"></a>`;
     flyToLookup[tract_num] = tractLayer.getBounds().getCenter();
   }
 
